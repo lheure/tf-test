@@ -6,7 +6,7 @@ variable v_resource_group_name {
     default = "${azurerm_resource_group.vnet-02.name}"
 }
 
-resource azurerm_subnet sub-pri-fdbk-a {
+resource azurerm_subnet "sub-pri-fdbk-a" {
   name                 = sub-pri-fdbk-a
   virtual_network_name = ${v_virtual_network_name}
   resource_group_name  = ${v_resource_group_name}
