@@ -7,7 +7,7 @@ provider "azurerm" {
 }
 
 # Create a resource group if it doesn’t exist
-resource "azurerm_resource_group" "${var.prefix}" {
+resource "azurerm_resource_group" "vision-poc" {
     name     = "${var.prefix}-rg"
     location = "${var.location}"
 
