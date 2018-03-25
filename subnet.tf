@@ -1,10 +1,3 @@
-variable v_virtual_network_name {
-    default = "${azurerm_virtual_network.vnet-01.name}"
-}
-
-variable v_resource_group_name {
-    default = "${azurerm_resource_group.rg-01.name}"
-}
 
 resource "azurerm_subnet" "sub-pri-fdbk-a" { name = "sub-pri-fdbk-a" virtual_network_name = "${azurerm_virtual_network.vnet-01.name}" resource_group_name  = "${azurerm_resource_group.rg-01.name}"  address_prefix       = "10.200.60.0/24"  }
 resource "azurerm_subnet" "sub-pri-fdbk-c" { name = "sub-pri-fdbk-c" virtual_network_name = "${azurerm_virtual_network.vnet-01.name}" resource_group_name  = "${azurerm_resource_group.rg-01.name}"  address_prefix       = "10.200.61.0/24"  }
