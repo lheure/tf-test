@@ -40,6 +40,6 @@ resource "azurerm_lb_rule" "s1uw2-ielb-papi-rule" {
   enable_floating_ip             = false
   backend_address_pool_id        = "${azurerm_lb_backend_address_pool.s1uw2-ielb-papi-bpool.id}"
   idle_timeout_in_minutes        = 5
-  probe_id                       = "${azurerm_lb_probe.lb_probe.id}"
-  depends_on                     = ["azurerm_lb_probe.lb_probe"]
+  probe_id                       = "${azurerm_lb_probe.s1uw2-ielb-papi-probe.id}"
+  depends_on                     = ["azurerm_lb_probe.s1uw2-ielb-papi-probe"]
 }
